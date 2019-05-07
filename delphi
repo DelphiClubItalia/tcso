@@ -1,0 +1,8 @@
+    try
+        // Try something wrong here
+    except
+        on e:exception do
+        begin
+            ShellApi.ShellExecute(GetDesktopWindow(), 'open',PChar('http://stackoverflow.com/search?q=[delphi]+' + e.Message), nil, nil, SW_SHOWNORMAL);
+        end;
+    end;
